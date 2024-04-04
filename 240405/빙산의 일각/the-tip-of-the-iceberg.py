@@ -1,6 +1,6 @@
 N = int(input())
 heights = []
-height_type = []
+height_type = [0]
 count = 0
 max_mountain = 0
 
@@ -12,7 +12,7 @@ for i in range(N):
 
 max_height = max(height_type)
 
-for water in range(max_height, -1, -1):
+for water in height_type:
     is_new = True
     count = 0
     for summit in heights:
