@@ -10,8 +10,6 @@ for i in range(N):
         height_type.append(h)
     heights.append(h)
 
-max_height = max(height_type)
-
 for water in height_type:
     is_new = True
     count = 0
