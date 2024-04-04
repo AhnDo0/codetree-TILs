@@ -20,7 +20,8 @@ for water in range(max_height):
             count += 1
             is_new = False
         else:
-            is_new = True
+            if summit <= water:
+                is_new = True
         if max_mountain < count:
             max_mountain = count
 
