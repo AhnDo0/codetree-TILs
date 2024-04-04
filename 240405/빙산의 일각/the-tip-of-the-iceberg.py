@@ -10,7 +10,7 @@ for i in range(N):
         height_type.append(h)
     heights.append(h)
 
-for water in height_type:
+for water in reversed(height_type):
     is_new = True
     count = 0
     for summit in heights:
@@ -20,7 +20,10 @@ for water in height_type:
         else:
             if summit <= water:
                 is_new = True
+            continue
         if max_mountain < count:
             max_mountain = count
+    if max_mountain > count:
+        break
 
 print(max_mountain)
