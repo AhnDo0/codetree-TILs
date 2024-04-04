@@ -1,20 +1,16 @@
 N = int(input())
 heights = []
-height_type = [0]
+height_type = set()
 count = 0
 max_mountain = 0
 checked = [0] * (N+2)
 
 for i in range(N):
     h = int(input())
-    if h not in height_type:
-        height_type.append(h)
     heights.append(h)
+    height_type.add(h)
 
 count = 0
-height_type.sort()
-height_type.pop()
-height_type.sort(reverse=True)
 
 for water in height_type:
     is_new = True
